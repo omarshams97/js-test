@@ -11,7 +11,13 @@ export default function(center, radius) {
       return radius ** 2 * Math.PI;
     },
     includes(Point) {
-      // TODO: write your code here
+      //calcutlating distance between point and center of circle 
+      var dist_points = (Point[0]-center[0])*(Point[0]-center[0]) + (Point[1]-center[1])*(Point[1]-center[1]);
+      //if distance is within radius point is in circle if not its outside.
+      if (dist_points < radius) {
+        return true;
+      }
+      return false;
     }
   }
 }
